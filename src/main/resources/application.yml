@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: gestao-de-precos
+  config:
+    import: aws-secretsmanager:/secrets/base_de_dados_ecommerce_v2
+  datasource:
+    driver-class-name: "org.postgresql.Driver"
+    username: ${nome_do_usuario}
+    password: ${senha}
+    url: "jdbc:postgresql://localhost:5432/ecommerce"
+
+aplicacao:
+  token:
+    google-api:
+      url: "https://oauth2.googleapis.com"
+  administrador:
+    email: ADD_EMAIL_ADMINISTRADOR
+
+server:
+  port: 8085
